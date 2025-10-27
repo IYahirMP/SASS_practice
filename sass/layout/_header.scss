@@ -1,0 +1,40 @@
+.header {
+    position:relative;
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8), 
+        rgba($color-primary-dark, 0.8)), 
+    url("../img/hero.jpg");
+    background-size: cover;
+    background-position: top;
+
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+    animation-name: moveInDown;
+    animation-duration: 1s;
+
+    &__logo-box {
+        position:absolute;
+        top: 4rem;
+        left: 4rem;
+        height: 10rem;
+    }
+
+    &__logo{
+        height:2.5rem;
+    }
+
+    &__logo:hover{
+        animation: moveInRight 1s ease-in;
+    }
+
+
+    &__text-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
